@@ -36,16 +36,16 @@ def handle_message(message):
 # This is identifying specific messages to respond to using the epic scrapper to get the free games
 @bot.message_handler(regexp="game ")
 def handle_message(message):
-    bot.send_message(message.chat.id, FG.GetFreeGames()[0] + ' ' + FG.GetFreeGames()[1] + ' \n' + FG.GetFreeGames()[2] + ' ' +  FG.GetFreeGames()[3])
+    bot.send_message(message.chat.id, FG.GetFreeGames()[0] + ' ' + FG.GetFreeGames()[1] + ' \n' + FG.GetFreeGames()[2] + ' ' + FG.GetFreeGames()[3])
 
 
 # this grabs a specified video and sends it to the user when the regex is satisfied
-@bot.message_handler(regexp="video ")
-def handle_message(message):
-    bot.send_message(message.chat.id, "Here is your video")
-    video = open('ice.mp4', 'rb')
-    bot.send_video(message.chat.id, video)
-    bot.send_message(message.chat_id, "ice")
+# @bot.message_handler(regexp="video ")
+# def handle_message(message):
+#     bot.send_message(message.chat.id, "Here is your video")
+#     video = open('ice.mp4', 'rb')
+#     bot.send_video(message.chat.id, video)
+#     bot.send_message(message.chat_id, "ice")
 
 
 # This waits for a response from the user at all times
